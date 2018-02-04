@@ -1,0 +1,13 @@
+{
+  "name": "wp-plugin-template",
+  "version": "1.0.0",
+  "description": "Wordpress Plugin Template",
+  "scripts": {
+  },
+  "author": "Terescode, LLC",
+  "devDependencies": {
+    "eslint": "^3.12.2"
+  },
+  "dependencies": {
+  }
+}

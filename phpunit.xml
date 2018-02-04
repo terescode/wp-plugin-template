@@ -1,0 +1,19 @@
+<phpunit
+	bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	verbose="true"
+	>
+	<testsuites>
+		<testsuite name="unit">
+			<directory prefix="test-" suffix=".php">./tests/</directory>
+		</testsuite>
+	</testsuites>
+	<php>
+	  <const name="ABSPATH" value="../../../"/>
+	  <const name="WPINC" value="wp-includes/"/>
+	</php>
+</phpunit>

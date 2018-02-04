@@ -1,0 +1,33 @@
+<phpunit
+	bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	verbose="true"
+	>
+	<testsuites>
+		<testsuite name="unit">
+			<directory prefix="test-" suffix=".php">./tests/</directory>
+		</testsuite>
+	</testsuites>
+	<filter>
+	  <whitelist>
+		<directory suffix=".php">./admin</directory>
+		<directory suffix=".php">./includes</directory>
+		<directory suffix=".php">./public</directory>
+		<file>./blastcaster.php</file>
+		<file>./uninstall.php</file>
+	  </whitelist>
+	</filter>
+	<logging>
+	  <log type="coverage-html" target="./reports/coverage/" lowUpperBound="95" highLowerBound="100"/>
+	  <log type="coverage-clover" target="./reports/coverage.xml"/>
+	  <log type="testdox-html" target="./reports/testdox.html"/>
+	</logging>
+	<php>
+	  <const name="ABSPATH" value="../../../"/>
+	  <const name="WPINC" value="wp-includes/"/>
+	</php>
+</phpunit>
